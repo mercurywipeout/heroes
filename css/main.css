@@ -49,6 +49,78 @@ header {
 	min-height: 760px;
 	padding-top: 60px;
 }
+article {
+	margin: 60px 0;
+}
+article.one {
+	width: 804px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+article.two {
+	width: 472px;
+	float: left;
+	text-align: center;
+}
+article.two + article.two, article.three + article.three {
+	margin-left: 26px;
+}
+article.three {
+	width: 306px;
+	float: left;
+}
+article.full {
+	width: 970px;
+	text-align: left;
+	clear: both;
+}
+article.full + article.full {
+	margin-top: 0;
+}
+article.keith {
+	background: #3c3c3c;
+	padding-top: 30px;
+}
+article.keith .content {
+	background: #3c3c3c url('../img/keith-photo.jpg') no-repeat left bottom;
+}
+article.keith .last {
+	padding-bottom: 60px;
+}
+article.book {
+	background-color: #f15a52;
+	clear: both;
+	float: left;
+	width: 100%;
+	padding: 60px 0;
+}
+article.lyndall, article.left-image, article.robert, article.taura {
+	float: left;
+}
+.video-container {
+    background-color: black;
+    clear: both;
+}
+.parallax {
+	clear: both;
+	height: 300px;
+}
+.image-container {
+	clear: both;
+	width: 100%;
+	margin-bottom: 25px;
+	float: left;
+}
+img.left {
+	float: left;
+}
+img.right {
+	float: right;
+}
+article.book img {
+	border: 3px solid #fcd8d6;
+}
 
 /* ==========================================================================
    Typography
@@ -59,6 +131,7 @@ html {
 }
 h1, h2, h3, h4, h5, h6, .author {
 	font-family: Oswald, Arial, Helvetica, Geneva, sans-serif;
+	clear: both;
 }
 h1 {
 	font-size: 5.5rem;
@@ -68,12 +141,95 @@ h1 {
 	width: 555px;
 	margin: 15px 0 0 0;
 }
-header {
+h2 {
+	font-size: 2.4rem;
+}
+article.two h2 {
+	text-align: center;
+}
+article.left-image h2, 
+article.book h3, 
+article.brian h2,
+article.lyndall h2,
+article.taura h2 {
+	clear: right;
+	float: right;
+}
+article.andretta h2  {
+	width: 638px;
+	clear: left;
+}
+article.dawn h2, article.robert h2 {
+	float: left;
+	clear: left;
+}
+article.left-image h2, article.book h3 {
+	width: 638px;
+}
+article.brian h2, 
+article.dawn h2 {
+	width: 555px;
+}
+article.robert h2, article.taura h2 {
+	width: 721px;
+}
+article.lyndall h2 {
+	width: 472px;
+}
+h3 {
+	font: 1.53rem/2.13rem "Open Sans", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: 300;
+}
+p {
+	text-align: left;
+}
+header, article.keith {
 	color: white;
 	text-shadow: 0px 2px 2px rgba(150, 150, 150, 1);
 }
-header p {
+article.book {
+	color: white;
+}
+header p, 
+article.brian p, 
+article.dawn p {
 	width: 555px;
+}
+article.brian p, 
+article.lyndall p, 
+article.left-image p, 
+article.book p,
+article.taura p {
+	float: right;
+	clear: right;
+}
+.keith p, .keith h2 {
+	width: 472px;
+	margin-left: 498px;
+}
+article.robert p {
+	float: left;
+	clear: left;
+}
+article.robert p, article.taura p {
+	width: 721px;
+}
+article.andretta p {
+	width: 638px;
+	clear: left;
+}
+article.left-image p, article.book p {
+	width: 638px;
+}
+article.lyndall p {
+	width: 472px;
+}
+blockquote {
+	font-size: 2rem;
+	line-height: 2.6rem;
+	width: 804px;
+	margin: 0 auto;
+	font-weight: 300;
 }
 .author {
 	font-size: 1.2rem;
@@ -88,15 +244,29 @@ header p {
 	clear: both;
 	text-align: right;
 }
-
 a:link {
 	text-decoration: none;
-	color: ;
 	font-weight: bold;
 }
 header a:link {
 	color: white;
 	text-decoration: underline;
+}
+a.btn {
+	border: 3px solid #fcd8d6;
+	background-color: #990000;
+	width: 166px;
+	text-align: center;
+	padding: 11px 0;
+	display: inline-block;
+	color: white;
+	font-size: 14px;
+}
+a.btn + a.btn {
+	margin-left: 26px;
+}
+a.btn:hover {
+	background-color: #660000;
 }
 a:hover, a:focus, a:active {
 	
