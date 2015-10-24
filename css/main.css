@@ -43,11 +43,21 @@ video {
 	width: 970px;
 	margin: 0 auto;
 }
+.content.small {
+	width: 804px;
+}
 header {
 	background: black url('../img/beyonce-singing.jpg') no-repeat right top;
 	background-size: cover;
 	min-height: 760px;
 	padding-top: 60px;
+}
+footer {
+	background: black url('../img/footer-bg.jpg') no-repeat right top;
+	background-size: cover;
+	min-height: 650px;
+	padding-top: 60px;
+	clear: both;
 }
 article {
 	margin: 60px 0;
@@ -104,7 +114,8 @@ article.lyndall, article.left-image, article.robert, article.taura {
 }
 .parallax {
 	clear: both;
-	height: 300px;
+	height: 587px;
+	background: transparent;
 }
 .image-container {
 	clear: both;
@@ -112,11 +123,17 @@ article.lyndall, article.left-image, article.robert, article.taura {
 	margin-bottom: 25px;
 	float: left;
 }
-img.left {
+figure {
+	margin: 0;
+}
+img.left, figure.left {
 	float: left;
 }
 img.right {
 	float: right;
+}
+article.andretta img {
+	margin-bottom: 60px;
 }
 article.book img {
 	border: 3px solid #fcd8d6;
@@ -142,7 +159,7 @@ h1 {
 	margin: 15px 0 0 0;
 }
 h2 {
-	font-size: 2.4rem;
+	font-size: 2.2rem;
 }
 article.two h2 {
 	text-align: center;
@@ -167,11 +184,14 @@ article.left-image h2, article.book h3 {
 	width: 638px;
 }
 article.brian h2, 
-article.dawn h2 {
+article.dawn h2, 
+article.taura h2, 
+article.robert h2 {
 	width: 555px;
 }
-article.robert h2, article.taura h2 {
-	width: 721px;
+article.taura h2, 
+article.robert h2 {
+	text-align: left;
 }
 article.lyndall h2 {
 	width: 472px;
@@ -187,12 +207,14 @@ header, article.keith {
 	color: white;
 	text-shadow: 0px 2px 2px rgba(150, 150, 150, 1);
 }
-article.book {
+article.book, footer {
 	color: white;
 }
 header p, 
 article.brian p, 
-article.dawn p {
+article.dawn p, 
+article.taura p, 
+article.robert p {
 	width: 555px;
 }
 article.brian p, 
@@ -211,9 +233,6 @@ article.robert p {
 	float: left;
 	clear: left;
 }
-article.robert p, article.taura p {
-	width: 721px;
-}
 article.andretta p {
 	width: 638px;
 	clear: left;
@@ -230,6 +249,10 @@ blockquote {
 	width: 804px;
 	margin: 0 auto;
 	font-weight: 300;
+	clear: both;
+}
+footer, footer p, footer h3 {
+	text-align: center;
 }
 .author {
 	font-size: 1.2rem;
@@ -244,15 +267,19 @@ blockquote {
 	clear: both;
 	text-align: right;
 }
+figcaption, .caption p {
+	font-size: .8rem;
+	text-align: center;
+}
 a:link {
 	text-decoration: none;
 	font-weight: bold;
 }
-header a:link {
+header a:link, footer a:link {
 	color: white;
 	text-decoration: underline;
 }
-a.btn {
+a.btn, footer a.btn {
 	border: 3px solid #fcd8d6;
 	background-color: #990000;
 	width: 166px;
@@ -261,6 +288,7 @@ a.btn {
 	display: inline-block;
 	color: white;
 	font-size: 14px;
+	text-decoration: none;
 }
 a.btn + a.btn {
 	margin-left: 26px;
