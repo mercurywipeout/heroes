@@ -1,28 +1,24 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+	color: #222;
 }
-
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+	background: #b3d4fc;
+	text-shadow: none;
 }
-
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+	background: #b3d4fc;
+	text-shadow: none;
 }
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
 }
 
 audio,
@@ -31,9 +27,8 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+	vertical-align: middle;
 }
-
 
 /* ==========================================================================
    Main
@@ -47,17 +42,22 @@ video {
 	width: 804px;
 }
 header {
-	background: black url('../img/beyonce-singing.jpg') no-repeat right top;
+	background: #562e2c url('../img/beyonce-singing.jpg') no-repeat right top;
 	background-size: cover;
 	min-height: 760px;
 	padding-top: 60px;
+	width: 100%;
+	float: left;
+	clear: both;
 }
 footer {
 	background: black url('../img/footer-bg.jpg') no-repeat right top;
 	background-size: cover;
-	min-height: 650px;
+	min-height: 600px;
 	padding-top: 60px;
 	clear: both;
+	width: 100%;
+	float: left;
 }
 article {
 	margin: 60px 0;
@@ -85,8 +85,11 @@ article.full {
 	text-align: left;
 	clear: both;
 }
-article.full + article.full {
+article.full + article.full, article.one + article.one {
 	margin-top: 0;
+}
+article.dawn {
+	margin-bottom: 0;
 }
 article.keith {
 	background: #3c3c3c;
@@ -104,8 +107,12 @@ article.book {
 	float: left;
 	width: 100%;
 	padding: 60px 0;
+	margin-top: 0;
 }
-article.lyndall, article.left-image, article.robert, article.taura {
+article.brian {
+	margin-top: 0;
+}
+article.lyndall, article.left-image, article.robert, article.taura, article.brian {
 	float: left;
 }
 .video-container {
@@ -116,6 +123,7 @@ article.lyndall, article.left-image, article.robert, article.taura {
 	clear: both;
 	height: 587px;
 	background: transparent;
+	margin-bottom: 10px;
 }
 .image-container {
 	clear: both;
@@ -128,6 +136,9 @@ figure {
 }
 img.left, figure.left {
 	float: left;
+}
+article.lyndall figure {
+	width: 472px;
 }
 img.right {
 	float: right;
@@ -196,19 +207,18 @@ article.robert h2 {
 article.lyndall h2 {
 	width: 472px;
 }
-h3 {
+h2.spacing {
+	margin-top: 50px;
+}
+h3, footer h3 {
+	font-size: 30px;
+	line-height: 38px;
 	font: 1.53rem/2.13rem "Open Sans", Arial, Helvetica, Geneva, sans-serif;
 	font-weight: 300;
 }
 p {
 	text-align: left;
-}
-header, article.keith {
-	color: white;
-	text-shadow: 0px 2px 2px rgba(150, 150, 150, 1);
-}
-article.book, footer {
-	color: white;
+	margin-top: 0;
 }
 header p, 
 article.brian p, 
@@ -233,9 +243,12 @@ article.robert p {
 	float: left;
 	clear: left;
 }
-article.andretta p {
+article.andretta p, footer p {
 	width: 638px;
 	clear: left;
+}
+footer p {
+	margin: 20px auto;
 }
 article.left-image p, article.book p {
 	width: 638px;
@@ -251,8 +264,22 @@ blockquote {
 	font-weight: 300;
 	clear: both;
 }
+.parallax blockquote {
+	color: white;
+	width: 555px;
+	margin-left: 415px;
+	padding-top: 60px;
+	text-shadow: 0px 2px 2px rgba(150, 150, 150, .75);
+}
 footer, footer p, footer h3 {
 	text-align: center;
+}
+header, article.keith {
+	color: white;
+	text-shadow: 0px 2px 2px rgba(150, 150, 150, .8);
+}
+article.book, footer {
+	color: white;
 }
 .author {
 	font-size: 1.2rem;
@@ -267,6 +294,12 @@ footer, footer p, footer h3 {
 	clear: both;
 	text-align: right;
 }
+p.twitter {
+	margin-top: 0;
+}
+em {
+	display: inline-block;
+}
 figcaption, .caption p {
 	font-size: .8rem;
 	text-align: center;
@@ -274,11 +307,21 @@ figcaption, .caption p {
 a:link {
 	text-decoration: none;
 	font-weight: bold;
+	border-bottom: 1px solid white;
 }
-header a:link, footer a:link {
+a:hover, a:focus, a:active {
 	color: white;
-	text-decoration: underline;
+	border-bottom: 1px solid white;
 }
+header a, header a:link, footer a, footer a:link {
+	color: white;
+	border-bottom: 1px solid white;
+}
+header a:hover, header a:focus, header a:active {
+	color: white;
+	border-bottom: 1px solid white;
+}
+
 a.btn, footer a.btn {
 	border: 3px solid #fcd8d6;
 	background-color: #990000;
@@ -296,16 +339,6 @@ a.btn + a.btn {
 a.btn:hover {
 	background-color: #660000;
 }
-a:hover, a:focus, a:active {
-	
-}
-
-
-
-
-
-
-
 
 /* ==========================================================================
    Media Queries
@@ -325,36 +358,6 @@ a:hover, a:focus, a:active {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-.invisible {
-    visibility: hidden;
-}
 
 .clearfix:before,
 .clearfix:after {
